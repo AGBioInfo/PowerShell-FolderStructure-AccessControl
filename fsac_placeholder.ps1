@@ -53,18 +53,18 @@ $Principal = "\$PrimaryUserG"
 
 # this creates the directory
 
-New-Item -Path "W:\CPDR\$Compound\publications\$Placeholder" -Type Directory >$null 
-New-Item -Path "W:\CPDR\$Compound\publications\$Placeholder\data" -Type Directory >$null 
-New-Item -Path "W:\CPDR\$Compound\publications\$Placeholder\deliverables" -Type Directory >$null 
-New-Item -Path "W:\CPDR\$Compound\publications\$Placeholder\programs" -Type Directory >$null 
-New-Item -Path "W:\CPDR\$Compound\publications\$Placeholder\outputs" -Type Directory >$null 
+New-Item -Path "W:\A\$Compound\publications\$Placeholder" -Type Directory >$null 
+New-Item -Path "W:\A\$Compound\publications\$Placeholder\data" -Type Directory >$null 
+New-Item -Path "W:\A\$Compound\publications\$Placeholder\deliverables" -Type Directory >$null 
+New-Item -Path "W:\A\$Compound\publications\$Placeholder\programs" -Type Directory >$null 
+New-Item -Path "W:\A\$Compound\publications\$Placeholder\outputs" -Type Directory >$null 
 
 # Using CACLS to assign read access for A user group on particular folder locations.
 
-ICACLS "W:\CPDR\$Compound\publications\$Placeholder\data" /grant "${Principal}:(OI)(CI)(W,M)" >$null
-ICACLS "W:\CPDR\$Compound\publications\$Placeholder\deliverables" /grant "${Principal}:(OI)(CI)(W,M)" >$null
-ICACLS "W:\CPDR\$Compound\publications\$Placeholder\programs" /grant "${Principal}:(OI)(CI)(W,M)" >$null
-ICACLS "W:\CPDR\$Compound\publications\$Placeholder\outputs" /grant "${Principal}:(OI)(CI)(W,M)" >$null
+ICACLS "W:\A\$Compound\publications\$Placeholder\data" /grant "${Principal}:(OI)(CI)(W,M)" >$null
+ICACLS "W:\A\$Compound\publications\$Placeholder\deliverables" /grant "${Principal}:(OI)(CI)(W,M)" >$null
+ICACLS "W:\A\$Compound\publications\$Placeholder\programs" /grant "${Principal}:(OI)(CI)(W,M)" >$null
+ICACLS "W:\A\$Compound\publications\$Placeholder\outputs" /grant "${Principal}:(OI)(CI)(W,M)" >$null
 
 
 
