@@ -101,7 +101,7 @@ Do {
 
  # this creates the directory 
  
- New-Item -Path "W:\CPDR\$Parent\$Child\$Child1\$Child2\$Child3" -Type Directory >$null 
+ New-Item -Path "W:\A\$Parent\$Child\$Child1\$Child2\$Child3" -Type Directory >$null 
 
  # Move to next row
 
