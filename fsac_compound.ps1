@@ -130,22 +130,22 @@ $Principal = "\$PrimaryUserG"
 
 $B "\$BUser" 
 
-# Using CACLS to assign read access for CPDR & BDO user group on particular folder locations. 
+# Using CACLS to assign read access for A & B user group on particular folder locations. 
 
-ICACLS "W:\CPDR\$ParentTrue\studies\$StudyTrue\final\pp_for_bdo" /grant "${BDO}:(OI)(CI)(RX)" >$null
-ICACLS "W:\CPDR\$ParentTrue\studies\$StudyTrue\preliminary\pp_for_bdo" /grant "${BDO}:(OI)(CI)(RX)" >$null
-ICACLS "W:\CPDR\$ParentTrue" /grant "${Principal}:(OI)(CI)(RX)" >$null
-ICACLS "W:\CPDR\$ParentTrue" /grant "${BDO}:(OI)(CI)(RX)" >$null
+ICACLS "W:\A\$ParentTrue\studies\$StudyTrue\final\pp_for_bdo" /grant "${B}:(OI)(CI)(RX)" >$null
+ICACLS "W:\A\$ParentTrue\studies\$StudyTrue\preliminary\pp_for_bdo" /grant "${B}:(OI)(CI)(RX)" >$null
+ICACLS "W:\A\$ParentTrue" /grant "${Principal}:(OI)(CI)(RX)" >$null
+ICACLS "W:\A\$ParentTrue" /grant "${B}:(OI)(CI)(RX)" >$null
 
 # Assigning write access for A user group on particular folder locations.
 
-$StartingDir1 = "W:\CPDR\$ParentTrue\studies\$StudyTrue\preliminary"
-$StartingDir2 = "W:\CPDR\$ParentTrue\studies\$StudyTrue\final"
-$StartingDir3 = "W:\CPDR\$ParentTrue\exploratoryanalysis"
-$StartingDir4 = "W:\CPDR\$ParentTrue\submissions\americas"
-$StartingDir6 = "W:\CPDR\$ParentTrue\submissions\asia pacific"
-$StartingDir7 = "W:\CPDR\$ParentTrue\submissions\emeaa"
-$StartingDir8 = "W:\CPDR\$ParentTrue\submissions\row"
+$StartingDir1 = "W:\A\$ParentTrue\studies\$StudyTrue\preliminary"
+$StartingDir2 = "W:\A\$ParentTrue\studies\$StudyTrue\final"
+$StartingDir3 = "W:\A\$ParentTrue\exploratoryanalysis"
+$StartingDir4 = "W:\A\$ParentTrue\submissions\americas"
+$StartingDir6 = "W:\A\$ParentTrue\submissions\asia pacific"
+$StartingDir7 = "W:\A\$ParentTrue\submissions\emeaa"
+$StartingDir8 = "W:\A\$ParentTrue\submissions\row"
 
 
 foreach ($file in $(Get-ChildItem $StartingDir1 -recurse)) {
